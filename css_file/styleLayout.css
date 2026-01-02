@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  outline: 0.5px solid red;
+}
+
+body {
+  background-color: #bebebe;
+}
+
+.BlackBox-position {
+  position: relative;        /* creates a reference box */
+  height: 220px;
+}
+
+.BlackBox-position h2 {
+  position: absolute;        /* removed from normal flow */
+  z-index: 2;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  color: black;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.BlackBox-position img {
+  position: absolute;        /* removed from normal flow */
+  z-index: 1;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.BlackBox-position p {
+  position: absolute;        /* removed from normal flow */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  z-index: 3;
+  color: red;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* Flex container */
+.BlueBox-Flex {
+  display: flex;               /* turns on flexbox */
+  flex-direction: column;      /* stack items vertically */
+  align-items: center;         /* center horizontally */
+  justify-content: center;     /* center vertically */
+  margin-top: 560px;
+
+  height: 220px;
+}
+
+/* Image inside flex container */
+.BlueBox-Flex img {
+  height: auto;
+}
+
+/* Text inside flex container */
+.BlueBox-Flex p {
+  text-align: center;
+
+  color: rgb(255, 25, 0);
+  font-size: 24px;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.BlackBox-position img{
+  width: 550px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.BlueBox-Flex img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+}
